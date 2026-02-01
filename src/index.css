@@ -134,6 +134,7 @@ body {
 .buttons {
   position: relative;
   height: 120px;
+  margin-top: 60px;
 }
 
 button {
@@ -176,11 +177,6 @@ button {
   margin: 20px 0;
   animation: fadeInOut 2s ease;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
   min-height: 30px;
   text-align: center;
   max-width: 90vw;
@@ -244,7 +240,6 @@ button {
   
   .hover-text {
     font-size: 16px;
-    top: 55%;
     max-width: 85vw;
   }
   
@@ -278,7 +273,6 @@ button {
   
   .hover-text {
     font-size: 14px;
-    top: 50%;
   }
   
   h1 {

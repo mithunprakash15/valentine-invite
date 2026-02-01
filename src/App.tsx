@@ -1,4 +1,4 @@
-import { useState, useEffect, type CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import "./index.css";
 
 // Import local assets
