@@ -1,0 +1,287 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader-gif {
+  width: 200px;
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.main-image {
+  width: 250px;
+  max-width: 80%;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.hover-gif {
+  width: 150px;
+  max-width: 60%;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  animation: fadeInOut 2s ease;
+}
+
+.success-gif {
+  width: 200px;
+  max-width: 70%;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: fadeIn 1s ease;
+}
+
+.loader-gif {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.constant-gif {
+  width: 250px;
+  height: 250px;
+  max-width: 70vw;
+  max-height: 40vh;
+  border-radius: 20px;
+  margin: 20px 0;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.main-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+.hover-gif {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 5;
+  animation: fadeInScale 0.8s ease;
+  pointer-events: none;
+  opacity: 0.7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeInScale {
+  from { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+.success-gif {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.buttons {
+  position: relative;
+  height: 120px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+  font-size: 22px;
+  padding: 16px 36px;
+  min-height: 50px;
+  min-width: 120px;
+}
+
+.no {
+  background: #333;
+  color: white;
+  font-size: 14px;
+  padding: 10px 18px;
+  min-height: 40px;
+  min-width: 80px;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  will-change: transform;
+}
+
+.no:hover {
+  background: #555;
+  transform: scale(1.05) !important;
+}
+
+.hover-text {
+  font-size: 18px;
+  color: #ff4d6d;
+  font-weight: bold;
+  margin: 20px 0;
+  animation: fadeInOut 2s ease;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  min-height: 30px;
+  text-align: center;
+  max-width: 90vw;
+  padding: 0 10px;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.share {
+  background: #25d366;
+  color: white;
+  font-size: 18px;
+  padding: 14px 26px;
+  margin-top: 20px;
+}
+
+.success {
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .constant-gif {
+    width: 200px;
+    height: 200px;
+    max-width: 60vw;
+    max-height: 35vh;
+  }
+  
+  .yes {
+    font-size: 18px;
+    padding: 12px 24px;
+    min-height: 44px;
+    min-width: 100px;
+  }
+  
+  .no {
+    font-size: 12px;
+    padding: 8px 14px;
+    min-height: 36px;
+    min-width: 70px;
+  }
+  
+  .hover-text {
+    font-size: 16px;
+    top: 55%;
+    max-width: 85vw;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .buttons {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .constant-gif {
+    width: 180px;
+    height: 180px;
+    max-width: 50vw;
+    max-height: 30vh;
+  }
+  
+  .yes {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .no {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .hover-text {
+    font-size: 14px;
+    top: 50%;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+}
